@@ -1,0 +1,67 @@
+/* 
+*************************
+				Base Styles
+*************************
+*/
+
+html {
+	font-size: 62.5%;	
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+h1, h2, h3, h4, h5 {
+	text-transform: uppercase;
+	font-family: $Lato;
+}
+h1 {
+	font-size: 52px;
+	font-size: 5.2rem;
+}
+h2 {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+h3 {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+h4 {
+	font-size: 12px;
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: $white;
+}
+p {
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 30px;
+	line-height: 3.0rem;
+	color: $dark-grey;
+}
+ul {
+	padding-left: 0px;
+	margin: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+li {
+	display: block;
+	text-decoration: none;
+	list-style-type: none;
+	font-size: 14px;
+	font-size: 1.4rem;
+}
+span {
+	color: $blue;
+}
+a {
+	text-decoration: none;
+	transition: all 0.3s;
+}
+i.fa {
+	font-size: 18px;
+	font-size: 1.8rem;
+}

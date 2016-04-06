@@ -1,0 +1,52 @@
+// Form Styles
+
+input {
+	font-size: 18px;
+	font-size: 1.8rem;
+	font-family: $Lato;
+	outline: none;
+}
+
+input[type='search'] {
+ 	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color:  #e5e5e5;
+	background-color: #fafafa;
+	height: 40px;
+ 	width: 250px;	
+ 	outline: none;
+ 	transition: all 0.3s;
+ 	padding: 0px 10px;
+ 	margin: 5px 0px;
+ 	&:focus, &:hover {
+ 		background-color: transparentize($light-grey, 0.7);
+ 	}
+}
+
+input[type='email'] {
+ 	background-color: transparentize($navy,0.8);
+ 	border: none;
+ 	padding: 20px 40px;
+ 	color: $white;
+ 	transition: all 0.3s;
+ 	&:focus, &:hover {
+ 		background-color: transparentize($navy,0.7);
+ 	}
+ 	&::placeholder {
+ 		color: transparentize($white,0.8);
+ 	}
+}
+input[type='submit'] {
+	background-color: transparentize($navy,0.6);
+	border: none;
+	padding: 20px 40px;
+	color: $white;
+	transition: all 0.3s;
+	&:hover {
+		background-color: transparentize($navy,0.5);
+	}
+	&:focus {
+		background-color: transparentize($navy, 0.3)
+	}
+}
