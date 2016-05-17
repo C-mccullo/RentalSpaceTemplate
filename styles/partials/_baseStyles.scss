@@ -15,27 +15,39 @@ h1, h2, h3, h4, h5 {
 	text-transform: uppercase;
 	font-family: $Lato;
 }
-h1 {
-	font-size: 52px;
-	font-size: 5.2rem;
+@mixin font-sizing($px) {
+	font-size: $px + px;
+	font-size: ($px /10 ) + rem;
+	i.fa {
+		font-size: $px;
+		font-size: ($px / 10) + rem
+	}
 }
+h1 {
+	@include font-sizing(52);
+}
+
 h2 {
-	font-size: 24px;
-	font-size: 2.4rem;
+	@include font-sizing(24);
+	// font-size: 24px;
+	// font-size: 2.4rem;
 }
 h3 {
-	font-size: 18px;
-	font-size: 1.8rem;
+	@include font-sizing (18);
+	// font-size: 18px;
+	// font-size: 1.8rem;
 }
 h4 {
-	font-size: 12px;
-	font-size: 1.2rem;
+	@include font-sizing(12);
+	// font-size: 12px;
+	// font-size: 1.2rem;
 	font-weight: 300;
 	color: $white;
 }
 p {
-	font-size: 14px;
-	font-size: 1.4rem;
+	@include font-sizing(14);
+	// font-size: 14px;
+	// font-size: 1.4rem;
 	line-height: 30px;
 	line-height: 3.0rem;
 	color: $dark-grey;

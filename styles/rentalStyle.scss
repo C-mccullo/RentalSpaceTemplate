@@ -4,432 +4,198 @@
 @import 'partials/baseStyles';
 @import 'partials/formStyles';
 @import 'partials/navBarStyles';
+@import 'partials/aboutPageStyle';
+@import 'partials/blogPageStyle';
 
-
-
-.hero {
-	background-image: url('assets/image/about/about-hero.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	padding: 70px 40px;
-	h1 {
-		color: $white;
-		max-width: 600px;
-		text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
-	}
-	p {
-		max-width: 600px;
-		color: $white;
-	}
-}
-
-.statistics {
-	text-align: center;
-	padding: 60px;
-	p {
-		max-width: 600px;
-		margin: 0 auto;
-	}
-}
-
-.statisticsNav {
-	margin: 0 auto;
-	margin: 0px auto 60px auto;
-	ul {
-		max-width: 330px;
-		margin: 0 auto;
-		a {
-			color: $grey;
-			padding: 6px 0px; 
-			position: relative;
-			&:hover {
-				color: $darker-grey;
-			}
-			&::after {
-				position: absolute;
-				top: 100%;
-				left: 0;
-				width: 100%;
-				height: 2px;
-				background: $blue;
-				content: '';
-				opacity: 0;
-				transition: opacity 0.3s, transform 0.3s;
-				transform: translateY(10px);
-			}
-			&:hover::after {
-				opacity: 1;
-				transform: translateY(0px);
-			}
-		}
-	}
-}
-
-.statisticsDisplayContainer {
-	padding: 40px;
-}
-
-.imageContainer {
-	margin: 0 auto;
-	width: calc(100% - 400px);
-	min-width: 250px;
+.IndexHero {
 	position: relative;
-	img {
-		width: 70%;
-	}
+	color: $white;
+	padding: 60px 30px;
+	background-image: url('assets/image/home/hero.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-
-.statText {
-	width: 200px;
-	position: absolute;
-	z-index: -1;
-	h1 {
+.IndexHeroText {
+	bottom: 30px;
+	margin-top: 100px;
+}
+.IndexHeroFlexContainer {
+	display: flex;
+	justify-content: space-between;
+}
+.IndexFlexItem:first-child {
+	margin: 0px 10px 0px 0px;
+}
+.IndexFlexItem:last-child {
+	margin: 0px 0px 0px 10px;
+}
+.IndexFlexItem {
+	flex-grow: 1;
+	background-color: transparentize($navy, 0.1);
+	border-radius: 3px;
+	margin: 0px 10px;
+	padding: 15px 30px;
+	border: 3px solid $blue;
+	p {
+		color: $white;
 		margin: 0;
-		position: relative;
-			&::after {
-			position: absolute;
-			content: '';
-			width: 200px;
-			height: 1px;
-			bottom: 15px;
-			background-color: $darker-grey;
-		}
+	}
+	&:hover, &:focus {
+		background-color: $blue;
 	}
 }
-
-.Top {
-	top: 0;	
-} 
-
-.Bottom {
-	bottom: 40px;
+.IndexAdvertise {
+	padding: 60px 30px;
 }
-
-.Right { 
-	text-align: left;
-	right: -200px;
-	h1::after {
-		left: -205px;
-	}
-	h4 {
-		color: $grey;
-    position: absolute;
-    top: 40px;
-    left: 2px;
-	}
-}
-
-.Left { 
-	text-align: right;
-	left: -200px;
-	h1::after {
-		right: -205px;
-	}
-	h4 {
-		color: $grey;
-    position: absolute;
-    top: 40px;
-    left: 50px;
-	}
-}
-
-.about {
+.IndexAdvertiseContainer {
 	display: flex;
 	flex-direction: row;
-	align-items: stretch;
+	background-color: $navy;
+	justify-content: space-between;
+	border: 3px solid $blue;
+	border-radius: 3px;
+	padding: 20px 0px;
 }
-
-.aboutImage {
-	width: 50%;
-	float: left;
-	background-image: url('assets/image/about/woman.png');
-	background-size: cover;
-	background-position: 50%;
+.IndexAdvertiseItem {
+	flex-grow: 1;
+	padding: 20px;
+	border-left: 1px solid transparentize($dark-blue, 0.8);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
-
-.aboutText {
-	width: 50%;
-	float: left;
+.IndexAdvertiseItem:first-child {
+	border-left: none;
+}
+.IndexAdvertiseItemText {
+	flex-grow: 1;
+	margin: 0;
+	color: $white;
+	text-align: center;
+	h1 {
+		font-size: 42px;
+		font-size: 4.2rem;
+		margin: 0;
+	}
+}
+.IndexLeft {
+	text-align: left;
+}
+section.IndexForSale {
 	background-color: $lighter-grey;
-	.textContainer {
-		padding: 60px;
-	}
 }
-
-.weOffer {
-	padding: 0px 40px 20px;
+.IndexNavContainer {
+	max-width: 600px;
+	display: flex;
+	align-items: center;
+	padding: 30px 0;
 	h3 {
-		text-align: center;
-		padding-top: 60px;
-		margin-top: 0px;
+		padding-right: 30px;
 	}
 }
-
-.offerFlexContainer {
-	max-width: 960px;
-	margin: 0 auto;
-	padding: 40px 0px 60px 0px;
+.IndexPropertyContainer {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	position: relative;
-	&::after {
-		content: '';
-		width: calc(100% - 20px);
-		height: 1px;
-		background-color: $grey;
-		position: absolute;
-		bottom: 0px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-}
-
-.offerFlexItem {
-	background-color: $blue;
-	width: 220px;
-	height: 220px;
-	margin: 10px;
-	padding: 40px 0px;
-	border-radius: 3px;
-	text-align: center;
-	h4 {
-		color: $white;
-	}
-}
-
-.testimonialsFlexContainer {
+	align-items: baseline;
 	margin: 0 auto;
-	max-width: 960px;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	padding: 40px 0px 60px;
+	width: calc(100% - 60px);
 }
-
-.testimonialsFlexItem {
-	padding: 30px 30px 0px 30px;
-	margin: 10px;
-	max-width: 300px;
-	border-left: solid 1px $grey;
+.IndexNav {
+	min-width: 250px;
+	margin: 0 auto 0;
+}
+.IndexPropertyItem {
+	margin: 10px 10px;
+	min-width: 200px;
+	max-width: 215px;
+}
+.IndexPropertyImage {
 	position: relative;
-	&::before {
-		content: "";
-		width: 10px;
-		height: 10px;
-		background-image: url('assets/icons/large-quotes.png');
-		background-size: cover;
-		position: absolute;
-		left: -20px;
-		top: 0px;
-	}
-	&::after {
-		content: "";
-		width: 10px;
-		height: 10px;
-		background-image: url('assets/icons/large-quotes.png');
-		background-size: cover;
-		transform: rotate(180deg);
-		position: absolute;
-		left: 10px;
-		top: 0px;
-	}
-	h4 {
-		color: $dark-grey;
-		font-size: 10px;
-		font-size: 1.0rem;
-	}
-}
-
-.notificationContainer {
-	background-color: $blue;
-	padding: 0px 40px;
-}
-
-.notificationBanner {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-} 
-.notificationTitle {
-	max-width: 400px;
-	min-width: 300px;
-	flex-grow: 1;
-	padding: 20px 40px;
-	h3, p {
-		margin: 0px;
-		color: $white;
-	}
-	h3 {
-		position: relative;
-		&::before {
-			content: '';
-			background-image: url("assets/icons/noun_mail_Edward_Boatman.svg");
-			background-repeat: no-repeat;
-			width: 18px;
-			height: 18px;
-			position: absolute;
-			left: -25px;
-			top: 5px;
-		}
-	}
-}
-.notificationBanner form {
-	flex-grow: 2;
-	display: flex;
-	flex-flow: row wrap;
-	// max-width: 600px;
-	input[type='email'] {
-		flex-grow: 2;
-		min-width: 300px;
-	}
-	input[type='submit'] {
-		min-width: 150px;
-		flex-grow: 1;
-	}
-}
-.mapContainer {
-	 background-image: url('assets/image/home/map.png');
-	 background-size: cover;
-	 background-position: 50%;
-	 padding-left: 40px;
-}
-.contactInfo {
-	max-width: 400px;
-	width: 50%;
-	background-color: transparentize($navy, 0.1);
-	color: white;
-}
-.contactContainer {
-	padding: 40px 40px;
-	h3 {
-		margin: 0;
-		text-transform: inherit;
-		font-weight: 400;
-	}
-}
-.social {
-	max-width: 220px;
-	.socialItem {
-		i.fa {
-			float: left;
-			padding-right: 10px;
-		}
-		h4 {
-			float: right;
-			margin: 0;
-		}
-	}	
-	// Create Mixin For Social list element
-	.face {
-		color: #2a6efc;
-		border-bottom: 1px solid #2a6efc;
-		margin: 0px 10px;
-	}
-	.twitter {
-		color: #55acee;
-		border-bottom: 1px solid #55acee;
-		margin: 0px 10px;
-	}
-}
-//****************************************
-//							BLOG PAGE
-//**************************************** 
-
-.BlogTitle {
-	border-bottom: 1px solid $light-grey;
-}
-.BlogContainer {
-	margin: 20px auto;
-}
-.BlogPost:first-child {
-	margin: 20px auto;
-}
-.BlogPost {
-	margin: 40px auto;
-}
-.BlogContainerPosts {
-	width: 68%;
-	float: left;
-	padding: 0px 20px 0px 0px;
-	border-bottom: 1px solid $light-grey;
-}
-.BlogContainerSide {
-	width: 32%;
-	float: right;
-	padding: 0px 0px 0px 20px;
-}
-.BlogSide {
-	h4 {
-		color: $black;
-		font-weight: 900;
-	}
-	margin: 20px 0px;
-	padding-bottom: 20px;
-	border-bottom: 1px solid $light-grey;
-	ul {
-		display: flex;
-		flex-flow: row wrap;
-		a {
-			color: $dark-grey;
-			width: 50%;
-			padding: 5px 0px;
-			cursor: pointer;
-			&:hover {
-				color: $light-grey;
-			}
-		}
-	}
-}
-.BlogPost {
-	background-color: $lighter-grey;
-}
-.BlogPostPic {
+	max-height: 222px;
 	img {
 		width: 100%;
 	}
 }
-.BlogPostText {
-	h4 {
-		color: $dark-grey;
+.IndexPropertyPrice {
+	background-color: $blue;
+	position: absolute;
+	padding: 5px 20px;
+	// top: 130px;
+	bottom: -10px;
+	left: -10px;
+	i.fa {
+
 	}
-	text-align: center;
-	padding: 20px;
+	h4 {
+		margin: 0;
+	}
 }
-.BlogQuoteBox {
-	h2 {
+
+.IndexAbout {
+	width: 60%;
+	min-width: 400px;
+	float: left;
+}
+.IndexAboutChooseUs {
+	width: 30%;
+	min-width: 250px;
+	float: right;
+	ul {
+		flex-direction: column;
+		color: $grey;
+		padding-left: 35px;
+		li {
+			position: relative;
+			padding: 10px 0px;
+			&::after {
+				position: absolute;
+				content: "";
+				background-image: url("assets/icons/check.png");
+				background-repeat: no-repeat;
+				width: 25px;
+				height: 25px;
+				left: -35px;
+			}
+		}
+	}
+}
+
+.IndexNews {
+	background-color: $navy;
+	max-height: 400px;
+	padding: 40px;
+	h3 {
 		color: $white;
 	}
-	margin: 40px auto;
-	padding: 40px;
-	text-align: center;
-	background-color: $blue;
-	background-image: url('assets/icons/large-quotes.png');
-	background-repeat: no-repeat;
-	background-position: center right;
 }
-
-.BlogPostIndexBar {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	padding: 20px 0px;
+.IndexNewsSlider {
+	overflow-x: auto;
 }
-.IndexBarButton a li, .IndexBarCenter ul a li {
-	font-size: 11px;
-	color: $white;
-	padding: 10px;
-	border-radius: 3px;
-	background-color: $grey;
-	transition: all 0.3s;
-	&:hover {
-		background-color: $blue;
+.IndexNewsContainer {
+	width: calc(235px * 7);
+}
+.IndexNewsItem {
+	
+	h2 {
+		color: $blue;
 	}
+	p {
+		color: $white;
+		font-weight: 200;
+	}
+	width: 215px;
+	margin: 10px;
+	float: left;
+}
+.IndexNewsItem:first-child {
+	margin-left: 0;
+}
+.IndexNewsItem:last-child {
+	margin-right: 0;
 }
 
-.IndexBarCenter ul a li {
-	margin: 0px 3px;
-}
 
 // ****************************
 // 			Media Queries

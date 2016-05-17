@@ -1,0 +1,102 @@
+//****************************************
+//							BLOG PAGE
+//**************************************** 
+
+.BlogTitle {
+	border-bottom: 1px solid $light-grey;
+}
+.BlogContainer {
+	margin: 20px auto;
+}
+.BlogPost:first-child {
+	margin: 20px auto;
+}
+.BlogPost {
+	margin: 40px auto;
+}
+.BlogContainerPosts {
+	width: 68%;
+	float: left;
+	padding: 0px 20px 0px 0px;
+	border-bottom: 1px solid $light-grey;
+}
+.BlogContainerSide {
+	width: 32%;
+	float: right;
+	padding: 0px 0px 0px 20px;
+}
+.BlogSide {
+	h4 {
+		color: $black;
+		font-weight: 900;
+	}
+	margin: 20px 0px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $light-grey;
+	ul {
+		display: flex;
+		flex-flow: row wrap;
+		a {
+			color: $dark-grey;
+			width: 50%;
+			padding: 5px 0px;
+			cursor: pointer;
+			&:hover {
+				color: $light-grey;
+			}
+		}
+	}
+}
+.BlogPost {
+	background-color: $lighter-grey;
+}
+.BlogPostPic {
+	img {
+		width: 100%;
+	}
+}
+.BlogPostText {
+	h4 {
+		color: $dark-grey;
+		text-transform: none;
+		a {
+			color: $blue;
+		}
+	}
+	text-align: center;
+	padding: 20px;
+}
+.BlogQuoteBox {
+	h2 {
+		color: $white;
+	}
+	margin: 40px auto;
+	padding: 40px;
+	text-align: center;
+	background-color: $blue;
+	background-image: url('assets/icons/large-quotes.png');
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+.BlogPostIndexBar {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 20px 0px;
+}
+.IndexBarButton a li, .IndexBarCenter ul a li {
+	font-size: 11px;
+	color: $white;
+	padding: 10px;
+	border-radius: 3px;
+	background-color: $grey;
+	transition: all 0.3s;
+	&:hover {
+		background-color: $blue;
+	}
+}
+
+.IndexBarCenter ul a li {
+	margin: 0px 3px;
+}

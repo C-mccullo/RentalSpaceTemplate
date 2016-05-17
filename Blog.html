@@ -49,7 +49,7 @@
 			<a href="index.html"><li><h4>About</h4></li></a>
 			<a href="#"><li><h4>Agents</h4></li></a>
 			<a href="#"><li><h4>Blog</h4></li></a>
-			<a href="#"><li><h4>Contact</h4></li></a>
+			<a href="#contact"><li><h4>Contact</h4></li></a>
 		</ul>
 	</nav>
 	<main class="Blog">
@@ -65,7 +65,7 @@
 						</div>
 						<div class="BlogPostText">
 							<h2>How to buy your first home with no money</h2>
-							<h4>December 5th, 2014 / By Nicolas Tipton / Investition</h4>
+							<h4>December 5th, 2014 / <a href="#">By Nicolas Tipton</a> / <a href="#">Investition</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reprehenderit, provident natus! Recusandae soluta consequatur, sunt reiciendis, dolore necessitatibus sed eveniet minima quam dignissimos quo.</p>
 						</div>
 					</article>
@@ -79,7 +79,7 @@
 						</div>
 						<div class="BlogPostText">
 							<h2>Photos of my holidays in Egypt</h2>
-							<h4>December 5th, 2014 / By Nicolas Tipton / Investition</h4>
+							<h4>December 5th, 2014 / <a href="#">By Nicolas Tipton</a> / <a href="#">Investition</a></h4>
 						</div>
 					</article>
 					<article class="BlogPost">
@@ -88,7 +88,7 @@
 						</div>
 						<div class="BlogPostText">
 							<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-							<h4>December 5th, 2014 / By Nicolas Tipton / Investition</h4>
+							<h4>December 5th, 2014 / <a href="#">By Nicolas Tipton</a> / <a href="#">Investition</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe reprehenderit, provident natus! Recusandae soluta consequatur, sunt reiciendis, dolore necessitatibus sed eveniet minima quam dignissimos quo.</p>
 						</div>
 					</article>
@@ -169,7 +169,11 @@
 						</ul>
 					</div>
 					<div class="BlogSideTwitter">
-						<!-- Add twitter widget here -->
+						<a class="twitter-timeline" 
+							href="https://twitter.com/C_McCullo" 
+							data-widget-id="721009762846908417">
+							Tweets by @C_McCullo
+						</a>
 					</div>
 				</aside>
 			</section>
@@ -177,7 +181,7 @@
 		</div>
 	</main>
 	
-	<footer class="contact">
+	<footer id="#contact" class="contact">
 		<div class="notificationContainer">
 			<div class="notificationBanner wrapper">
 				<div class="notificationTitle">
@@ -191,31 +195,35 @@
 			</div>
 		</div>
 		<div class="mapContainer">
-			<div class="contactInfo">
-				<div class="contactContainer number">
-					<h2>08244 204 0000</h2>
-					<h3><i>info@rentalspace.com</i></h3>
+			<div class="target wrapper">
+				<div class="contactInfo">
+					<div class="contactContainer number">
+						<h2>08244 204 0000</h2>
+						<h3><i>info@rentalspace.com</i></h3>
+					</div>
+					<div class="contactContainer address">
+						<h3>Rental Space <br>
+							42 Oatland Road, <br>
+							London <br>
+							LS1 7JR, West London
+						</h3>
+					</div>
+					<ul class="contactContainer social">
+						<li class="socialItem clearfix face">
+							<i class="fa fa-facebook"></i>
+							<h4>FaceBook</h4>
+						</li>
+						<li class="socialItem clearfix twitter">	
+							<i class="fa fa-twitter"></i>
+							<h4>Twitter</h4>
+						</li>
+					</ul>
 				</div>
-				<div class="contactContainer address">
-					<h3>Rental Space <br>
-						42 Oatland Road, <br>
-						London <br>
-						LS1 7JR, West London
-					</h3>
-				</div>
-				<ul class="contactContainer social">
-					<li class="socialItem clearfix face">
-						<i class="fa fa-facebook"></i>
-						<h4>FaceBook</h4>
-					</li>
-					<li class="socialItem clearfix twitter">	
-						<i class="fa fa-twitter"></i>
-						<h4>Twitter</h4>
-					</li>
-				</ul>
 			</div>
 		</div>
 	</footer>
 </body>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/main.min.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </html>
